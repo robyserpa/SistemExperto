@@ -1,0 +1,38 @@
+;rule10
+(defrule rule10
+	(phone_selected(brand ?brand)(name_device $?nd)(type_device ?typed)(screen ?screen)
+	(resolution ?res)(fps ?fps)(processor $?pro)(ram ?ram)(rom ?rom)(microsd ?sd)(battery ?bat)
+	(charge_lvl ?charge)(wireless_charge ?wireless)(nfc ?nfc)(fingerprint ?fing)(facial_recognition ?facial)
+	(camera_quality ?camera)(video_quality ?video_quality)(video_camera ?video)(waterproof_specs ?water_specs)
+	(waterproof ?water)(sound ?sound)(connective ?conect)(size ?size)(weight ?weight)(price ?price))
+	
+	(test (= ?price ?*better*))
+	
+=> 
+	(printout t "Recomendado dispositivo " ?brand " " ?nd " que tiene un precio de $" ?price crlf )
+	(printout t "		Caracteristicas: " crlf)
+	(printout t "	Tipo de dispositivo: " ?typed crlf)
+	(printout t "	Tecnología Pantalla: " ?screen crlf)
+	(printout t "	Resolución de la pantalla: " ?res crlf)
+	(printout t "	Frecuencia de refrescode la pantalla: " ?fps "Hz" crlf)
+	(printout t "	Tipo del procesador: " ?pro crlf)
+	(printout t "	RAM del dispositivo: " ?ram "GB" crlf)
+	(printout t "	ALmacenamiento del dispositivo: " ?rom "GB" crlf)
+	(printout t "	ALmacenamiento externo: " ?sd crlf)
+	(printout t "	Miliamperios de la bateria: " ?bat "mAh" crlf)
+	(printout t "	Carga rapida de: " ?charge "W" crlf)
+	(printout t "	Carga inalambrica: " ?wireless crlf)
+	(printout t "	Tiene NFC: " ?nfc crlf)
+	(printout t "	Lector de huella en pantalla: " ?fing crlf)
+	(printout t "	reconocimiento facial: " ?facial crlf)
+	(printout t "	Calidad de las camaras : " ?camera crlf)
+	(printout t "	Resolución de la camara de video: " ?video crlf)
+	(printout t "	Resistencia al agua y polvo: " ?water crlf)
+	(printout t "	Calidad de sonido: " ?sound crlf)
+	(printout t "	Tipo de cobertura: " ?conect crlf)
+	(printout t "	Tamaño del dispositivo: " ?size "cm" crlf)
+	(printout t "	Peso del dispositivo: " ?weight "gr" crlf)
+	(printout t crlf)
+	(printout t crlf)
+	
+)
